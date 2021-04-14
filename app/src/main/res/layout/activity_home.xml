@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="-12dp"
+        android:elevation="@dimen/offset_4"
+        android:orientation="vertical"
+        app:cardCornerRadius="@dimen/offset_16"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="false">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/offset_24">
+
+                <TextView
+                    style="@style/TextNormal"
+                    android:layout_marginTop="@dimen/offset_8"
+                    android:text="Doc Picker"
+                    android:textColor="@color/md_black_1000"
+                    android:textSize="@dimen/font_24" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/offset_30"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/offset_16"
+                        android:layout_height="@dimen/length_16"
+                        android:background="@drawable/dr_circle_grey_100">
+
+                        <View
+                            android:layout_width="@dimen/length_4"
+                            android:layout_height="@dimen/length_4"
+                            android:layout_gravity="center"
+                            android:background="@drawable/dr_circle_black" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        style="@style/TextNormal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="@dimen/offset_8"
+                        android:text="Only Documents"
+                        android:textColor="@color/md_grey_500" />
+
+                </LinearLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/offset_16"
+                    android:layout_marginLeft="@dimen/offset_16"
+                    app:alignContent="stretch"
+                    app:alignItems="stretch"
+                    app:flexWrap="wrap">
+
+                    <TextView
+                        style="@style/FlexText"
+                        android:text="Presentation" />
+
+                    <TextView
+                        style="@style/FlexText"
+                        android:text="Spreadsheet" />
+
+                    <TextView
+                        style="@style/FlexText"
+                        android:text="Words" />
+
+                    <TextView
+                        style="@style/FlexText"
+                        android:text="Pdf" />
+
+                    <TextView
+                        style="@style/FlexText"
+                        android:text="Text" />
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <TextView
+                    android:id="@+id/activity_main_doc_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dr_rect_round_accent"
+                    android:paddingStart="@dimen/offset_48"
+                    android:paddingEnd="@dimen/offset_48"
+                    android:paddingTop="@dimen/offset_10"
+                    android:paddingBottom="@dimen/offset_10"
+                    android:text="Choose"
+                    android:layout_marginTop="@dimen/offset_12"
+                    android:layout_marginStart="@dimen/offset_16"
+                    android:layout_marginLeft="@dimen/offset_16"
+                    android:layout_marginBottom="@dimen/offset_8"
+                    android:textColor="@color/md_white_1000"
+                    android:elevation="@dimen/offset_3"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/offset_30"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/offset_16"
+                        android:layout_height="@dimen/length_16"
+                        android:background="@drawable/dr_circle_grey_100">
+
+                        <View
+                            android:layout_width="@dimen/length_4"
+                            android:layout_height="@dimen/length_4"
+                            android:layout_gravity="center"
+                            android:background="@drawable/dr_circle_black" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        style="@style/TextNormal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="@dimen/offset_8"
+                        android:text="Including Media"
+                        android:textColor="@color/md_grey_500" />
+
+                </LinearLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/offset_16"
+                    android:layout_marginLeft="@dimen/offset_16"
+                    app:alignContent="stretch"
+                    app:alignItems="stretch"
+                    app:flexWrap="wrap">
+
+                    <TextView
+                        style="@style/FlexText"
+                        android:text="All Documents" />
+
+                    <TextView
+                        style="@style/FlexText"
+                        android:text="Video" />
+
+                    <TextView
+                        style="@style/FlexText"
+                        android:text="Image" />
+
+                    <TextView
+                        style="@style/FlexText"
+                        android:text="Audio" />
+                </com.google.android.flexbox.FlexboxLayout>
+
+
+                <TextView
+                    android:id="@+id/activity_main_all_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dr_rect_round_accent"
+                    android:paddingStart="@dimen/offset_48"
+                    android:paddingEnd="@dimen/offset_48"
+                    android:paddingTop="@dimen/offset_10"
+                    android:paddingBottom="@dimen/offset_10"
+                    android:text="Choose"
+                    android:layout_marginTop="@dimen/offset_12"
+                    android:layout_marginStart="@dimen/offset_16"
+                    android:layout_marginBottom="@dimen/offset_8"
+                    android:layout_marginLeft="@dimen/offset_16"
+                    android:textColor="@color/md_white_1000"
+                    android:elevation="@dimen/offset_3"/>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+

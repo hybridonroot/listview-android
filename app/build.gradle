@@ -1,40 +1,88 @@
-plugins {
-    id 'com.android.application'
-}
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
-
+    compileSdkVersion 29
     defaultConfig {
-        applicationId "com.hybridoitc.listing"
+        applicationId "com.greentoad.turtlebody.docpicker.sample"
         minSdkVersion 16
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
-
+        targetSdkVersion 29
+        versionCode 2
+        versionName "1.0.1"
+        vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        release
+        /*config {
 
+        }*/
+    }
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
 dependencies {
-
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'org.jetbrains:annotations:15.0'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0-alpha10'
+    implementation project(path: ':docpicker')
+
+    //flexbox
+    implementation 'com.google.android:flexbox:1.1.0'
+
+    //Anko
+    implementation "org.jetbrains.anko:anko:0.10.8"
+
+    //rxjava
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.10'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+
+    /*Material Dialog*/
+    implementation 'com.afollestad.material-dialogs:core:2.7.0'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
+
+
+def Properties props = new Properties()
+def propFile = rootProject.file('app/signing.properties')
+
+if (propFile.canRead()) {
+    props.load(new FileInputStream(propFile))
+
+    println 'signing.properties'
+    if (props != null &&
+            props.containsKey('STORE_FILE') &&
+            props.containsKey('STORE_PASSWORD') &&
+            props.containsKey('KEY_ALIAS') &&
+            props.containsKey('KEY_PASSWORD')) {
+        android.signingConfigs.release.storeFile = file(props['STORE_FILE'])
+        android.signingConfigs.release.storePassword = props['STORE_PASSWORD']
+        android.signingConfigs.release.keyAlias = props['KEY_ALIAS']
+        android.signingConfigs.release.keyPassword = props['KEY_PASSWORD']
+        android.signingConfigs.release.v1SigningEnabled = true
+        android.signingConfigs.release.v2SigningEnabled = true
+    } else {
+        println 'signing.properties found but some entries are missing'
+        android.buildTypes.release.signingConfig = null
+    }
+} else {
+    println 'signing.properties not found'
+    android.buildTypes.release.signingConfig = null
 }

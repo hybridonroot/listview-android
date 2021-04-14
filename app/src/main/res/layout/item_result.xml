@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/md_white_1000"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/item_result_doc_ext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/offset_6"
+            android:layout_margin="@dimen/offset_16"
+            tools:text="pdf"
+            android:textSize="@dimen/font_12"
+            android:textColor="@color/md_white_1000"
+            android:gravity="center"
+            android:background="@drawable/tb_doc_picker_dr_rect_round_red_doc_background"
+            app:srcCompat="@drawable/tb_doc_picker_ic_icon_folder"/>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/item_result_doc_name"
+                style="@style/TextTitle"
+                android:textColor="@color/md_grey_900"
+                tools:hint="Doc Name" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>
