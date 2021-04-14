@@ -1,6 +1,6 @@
-# FilePicker Library for Android
+# FilePicker Library sample app for Android
 
-A FilePicker library for Android for selecting multiple types of files and also to capture Images and Videos.
+A FilePicker library sample app for Android for selecting multiple types of mainly documents
 
 ## Usage
 
