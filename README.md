@@ -102,12 +102,7 @@ The FilePickerActivity can be configured by using ```Configurations.Builder``` m
 
 ## Contributions
 
-Feel free to contribute to this project. Before creating issues or pull request please take a look at following templates.
-
-* [Bug report template](.github/ISSUE_TEMPLATE/bug_report.md)
-* [Feature request template](.github/ISSUE_TEMPLATE/feature_request.md)
-* [Pull Request template](.github/PULL_REQUEST_TEMPLATE.md)
-
+Feel free to contribute to this project.
 ## License
 
     Copyright (c) 2018, Jaisel Rahman
