@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">Document Picker</string>
+    <string name="app_name">Document Pciker</string>
+    <string name="launch_doc_picker">Launch Doc Picker</string>
+    <string name="launch_file_picker">Launch All File Picker</string>
+    <string name="file_thumbnail">File thumbnail</string>
+    <string name="uri">Uri : %1$s</string>
+    <string name="size">Size :  %1$d</string>
+    <string name="mime">Mime: %1$s</string>
+    <string name="type">Type : %1$d</string>
+    <string name="name">Name : %1$s</string>
+    <string name="bucketname">BucketName : %1$s</string>
+    <string name="launch_audio_picker">Launch audio picker</string>
+    <string name="launch_video_picker">Launch video picker</string>
+    <string name="launch_image_picker">Launch image picker</string>
+    <string name="share_log">Share Log</string>
+    <string name="details_of_selected_doc">Details Of Selected Doc</string>
 </resources>
