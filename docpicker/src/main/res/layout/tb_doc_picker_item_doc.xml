@@ -66,7 +66,7 @@
                     tools:hint="Size" />
             </LinearLayout>
 
-            <com.greentoad.turtlebody.docpicker.widget.ImageViewCheckable
+            <com.hybridoitc.ahmad.docpicker.widget.ImageViewCheckable
                 android:id="@+id/item_doc_ivc"
                 android:layout_width="@dimen/length_32"
                 android:layout_height="@dimen/length_32"

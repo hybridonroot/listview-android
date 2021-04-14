@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.greentoad.turtlebody.docpicker.sample">
+    package="com.hybridoitc.ahmad.docpicker.sample">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -14,15 +14,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".picker_result.ActivityJavaSample"/>
-        <activity android:name=".picker_result.ActivityResults" />
-        <activity android:name=".ActivityLauncher">
+        <activity android:name="com.hybridoitc.ahmad.docpicker.sample.picker_result.ActivityJavaSample"/>
+        <activity android:name="com.hybridoitc.ahmad.docpicker.sample.picker_result.ActivityResults" />
+        <activity android:name="com.hybridoitc.ahmad.docpicker.sample.ActivityLauncher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityHome" />
+        <activity android:name="com.hybridoitc.ahmad.docpicker.sample.ActivityHome" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

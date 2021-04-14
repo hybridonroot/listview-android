@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.greentoad.turtlebody.docpicker">
+    package="com.hybridoitc.ahmad.docpicker">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application>
-        <activity android:name=".ui.components.ActivityLibMain"
+        <activity android:name="com.hybridoitc.ahmad.docpicker.ui.components.ActivityLibMain"
             android:theme="@style/TbDocPickerTheme"/>
 
         <provider

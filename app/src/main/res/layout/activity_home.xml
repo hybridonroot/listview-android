@@ -20,18 +20,21 @@
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:fontFamily="@font/aldrich">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:padding="@dimen/offset_24">
+                android:padding="@dimen/offset_24"
+                android:fontFamily="@font/aldrich">
 
                 <TextView
                     style="@style/TextNormal"
                     android:layout_marginTop="@dimen/offset_8"
-                    android:text="Doc Picker"
+                    android:fontFamily="@font/aldrich"
+                    android:text="Document Picker"
                     android:textColor="@color/md_black_1000"
                     android:textSize="@dimen/font_24" />
 
@@ -40,18 +43,21 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/offset_30"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:fontFamily="@font/aldrich">
 
                     <FrameLayout
                         android:layout_width="@dimen/offset_16"
                         android:layout_height="@dimen/length_16"
-                        android:background="@drawable/dr_circle_grey_100">
+                        android:background="@drawable/dr_circle_grey_100"
+                        android:fontFamily="@font/aldrich">
 
                         <View
                             android:layout_width="@dimen/length_4"
                             android:layout_height="@dimen/length_4"
                             android:layout_gravity="center"
-                            android:background="@drawable/dr_circle_black" />
+                            android:background="@drawable/dr_circle_black"
+                            android:fontFamily="@font/aldrich" />
 
                     </FrameLayout>
 
@@ -61,7 +67,8 @@
                         android:layout_weight="1"
                         android:padding="@dimen/offset_8"
                         android:text="Only Documents"
-                        android:textColor="@color/md_grey_500" />
+                        android:textColor="@color/md_grey_500"
+                        android:fontFamily="@font/aldrich" />
 
                 </LinearLayout>
 
@@ -72,27 +79,33 @@
                     android:layout_marginLeft="@dimen/offset_16"
                     app:alignContent="stretch"
                     app:alignItems="stretch"
-                    app:flexWrap="wrap">
+                    app:flexWrap="wrap"
+                    android:fontFamily="@font/aldrich">
 
                     <TextView
                         style="@style/FlexText"
-                        android:text="Presentation" />
+                        android:text="Presentation"
+                        android:fontFamily="@font/aldrich" />
 
                     <TextView
                         style="@style/FlexText"
-                        android:text="Spreadsheet" />
+                        android:text="Spreadsheet"
+                        android:fontFamily="@font/aldrich" />
 
                     <TextView
                         style="@style/FlexText"
-                        android:text="Words" />
+                        android:text="Words"
+                        android:fontFamily="@font/aldrich" />
 
                     <TextView
                         style="@style/FlexText"
-                        android:text="Pdf" />
+                        android:text="Pdf"
+                        android:fontFamily="@font/aldrich" />
 
                     <TextView
                         style="@style/FlexText"
-                        android:text="Text" />
+                        android:text="Text"
+                        android:fontFamily="@font/aldrich" />
                 </com.google.android.flexbox.FlexboxLayout>
 
                 <TextView
@@ -109,6 +122,7 @@
                     android:layout_marginStart="@dimen/offset_16"
                     android:layout_marginLeft="@dimen/offset_16"
                     android:layout_marginBottom="@dimen/offset_8"
+                    android:fontFamily="@font/aldrich"
                     android:textColor="@color/md_white_1000"
                     android:elevation="@dimen/offset_3"/>
 
@@ -117,18 +131,21 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/offset_30"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:fontFamily="@font/aldrich">
 
                     <FrameLayout
                         android:layout_width="@dimen/offset_16"
                         android:layout_height="@dimen/length_16"
-                        android:background="@drawable/dr_circle_grey_100">
+                        android:background="@drawable/dr_circle_grey_100"
+                        android:fontFamily="@font/aldrich">
 
                         <View
                             android:layout_width="@dimen/length_4"
                             android:layout_height="@dimen/length_4"
                             android:layout_gravity="center"
-                            android:background="@drawable/dr_circle_black" />
+                            android:background="@drawable/dr_circle_black"
+                            android:fontFamily="@font/aldrich" />
 
                     </FrameLayout>
 
@@ -138,7 +155,8 @@
                         android:layout_weight="1"
                         android:padding="@dimen/offset_8"
                         android:text="Including Media"
-                        android:textColor="@color/md_grey_500" />
+                        android:textColor="@color/md_grey_500"
+                        android:fontFamily="@font/aldrich"/>
 
                 </LinearLayout>
 
@@ -149,23 +167,28 @@
                     android:layout_marginLeft="@dimen/offset_16"
                     app:alignContent="stretch"
                     app:alignItems="stretch"
-                    app:flexWrap="wrap">
+                    app:flexWrap="wrap"
+                    android:fontFamily="@font/aldrich">
 
                     <TextView
                         style="@style/FlexText"
-                        android:text="All Documents" />
+                        android:text="All Documents"
+                        android:fontFamily="@font/aldrich" />
 
                     <TextView
                         style="@style/FlexText"
-                        android:text="Video" />
+                        android:text="Video"
+                        android:fontFamily="@font/aldrich" />
 
                     <TextView
                         style="@style/FlexText"
-                        android:text="Image" />
+                        android:text="Image"
+                        android:fontFamily="@font/aldrich" />
 
                     <TextView
                         style="@style/FlexText"
-                        android:text="Audio" />
+                        android:text="Audio"
+                        android:fontFamily="@font/aldrich" />
                 </com.google.android.flexbox.FlexboxLayout>
 
 
@@ -179,15 +202,30 @@
                     android:paddingTop="@dimen/offset_10"
                     android:paddingBottom="@dimen/offset_10"
                     android:text="Choose"
+                    android:fontFamily="@font/aldrich"
                     android:layout_marginTop="@dimen/offset_12"
                     android:layout_marginStart="@dimen/offset_16"
                     android:layout_marginBottom="@dimen/offset_8"
                     android:layout_marginLeft="@dimen/offset_16"
                     android:textColor="@color/md_white_1000"
                     android:elevation="@dimen/offset_3"/>
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/TextNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/offset_8"
+                    android:fontFamily="@font/aldrich"
+                    android:text="PB Ahmad Tahir"
+                    android:textColor="@color/md_black_1000"
+                    android:textSize="@dimen/font_24" />
+
             </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>
+
     </androidx.cardview.widget.CardView>
+
 </LinearLayout>
 

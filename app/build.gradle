@@ -1,15 +1,16 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
     defaultConfig {
-        applicationId "com.greentoad.turtlebody.docpicker.sample"
+        applicationId "com.hybridoitc.docpicker.app"
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 2
-        versionName "1.0.1"
+        versionCode 1
+        versionName "1.0"
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -29,12 +30,13 @@ android {
 }
 
 dependencies {
+    implementation platform('com.google.firebase:firebase-bom:27.0.0')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core-ktx:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-
+    implementation 'com.google.firebase:firebase-analytics'
 
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.android.material:material:1.1.0-alpha10'

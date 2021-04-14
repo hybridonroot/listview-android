@@ -43,7 +43,7 @@
             tools:hint="Doc Name" />
 
 
-        <com.greentoad.turtlebody.docpicker.widget.ImageViewCheckable
+        <com.hybridoitc.ahmad.docpicker.widget.ImageViewCheckable
             android:id="@+id/item_doc_filter_ivc"
             android:layout_width="@dimen/length_24"
             android:layout_height="@dimen/length_24"
