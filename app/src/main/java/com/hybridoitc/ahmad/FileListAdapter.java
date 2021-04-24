@@ -31,7 +31,7 @@ import com.hybridoitc.filepicker.model.MediaFile;
 
 import java.util.ArrayList;
 
-public class FileListAdapter extends RecyclerView.Adapter<FileListAdapter.ViewHolder> {
+public class  mFileListAdapter extends RecyclerView.Adapter<FileListAdapter.ViewHolder> {
     private ArrayList<MediaFile> mediaFiles;
 
     public FileListAdapter(ArrayList<MediaFile> mediaFiles) {

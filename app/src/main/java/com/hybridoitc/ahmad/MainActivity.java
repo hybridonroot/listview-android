@@ -62,95 +62,25 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Image not selected", Toast.LENGTH_SHORT).show();
             }
         });
-        /*
-        findViewById(R.id.launch_imagePicker).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pickImage.launch(new Configurations.Builder()
-                        .setCheckPermission(true)
-                        .setSelectedMediaFiles(mediaFiles)
-                        .enableImageCapture(true)
-                        .setShowVideos(false)
-                        .setSkipZeroSizeFiles(true)
-                        .setMaxSelection(10)
-                        .build());
-            }
-        });
 
-        findViewById(R.id.launch_videoPicker).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FilePickerActivity.class);
-                intent.putExtra(FilePickerActivity.CONFIGS, new Configurations.Builder()
-                        .setCheckPermission(true)
-                        .setSelectedMediaFiles(mediaFiles)
-                        .enableVideoCapture(true)
-                        .setShowImages(false)
-                        .setMaxSelection(10)
-                        .setIgnorePaths(".*WhatsApp.*")
-                        .build());
-                startActivityForResult(intent, FILE_REQUEST_CODE);
-            }
-        });
-
-        findViewById(R.id.launch_audioPicker).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FilePickerActivity.class);
-                MediaFile file = null;
-                for (int i = 0; i < mediaFiles.size(); i++) {
-                    if (mediaFiles.get(i).getMediaType() == MediaFile.TYPE_AUDIO) {
-                        file = mediaFiles.get(i);
-                    }
-                }
-                intent.putExtra(FilePickerActivity.CONFIGS, new Configurations.Builder()
-                        .setCheckPermission(true)
-                        .setShowImages(false)
-                        .setShowVideos(false)
-                        .setShowAudios(true)
-                        .setSingleChoiceMode(true)
-                        .setSelectedMediaFile(file)
-                        .setTitle("Select an audio")
-                        .build());
-                startActivityForResult(intent, FILE_REQUEST_CODE);
-            }
-        });
-        findViewById(R.id.launch_filePicker).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.launch_docPicker).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, DirSelectActivity.class);
                 intent.putExtra(DirSelectActivity.CONFIGS, new Configurations.Builder()
                         .setCheckPermission(true)
-                        .setSelectedMediaFiles(mediaFiles)
-                        .setShowFiles(true)
-                        .setShowImages(true)
-                        .setShowAudios(true)
-                        .setShowVideos(true)
-                        .setIgnoreNoMedia(false)
-                        .enableVideoCapture(true)
-                        .enableImageCapture(true)
-                        .setIgnoreHiddenFile(false)
-                        .setMaxSelection(10)
-                        .setTitle("Select a file")
-                        .build());
-                startActivityForResult(intent, FILE_REQUEST_CODE);
-            }
-        });
-        */
-        findViewById(R.id.launch_docPicker).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pickImage.launch(new Configurations.Builder()
-                        .setCheckPermission(true)
+                        .setShowAudios(false)
+                        .setShowImages(false)
+                        .setShowVideos(false)
                         .setSuffixes("txt", "pdf",  "rtf", "csv", "xml",
                                 "doc", "docx", "odt",
                                 "ppt", "pptx", "pps",
                                 "xls", "xlsx")
-                        .setSelectedMediaFiles(mediaFiles)
-                        .setShowVideos(false)
+                        .setShowFiles(true)
                         .setSkipZeroSizeFiles(true)
                         .setMaxSelection(10)
                         .build());
+                startActivityForResult(intent, FILE_REQUEST_CODE);
             }
 
         });
